@@ -3,16 +3,25 @@ import { safeStringEncodeNums } from './safe-encode-numbers';
 import { installCollapseEventListeners } from './collapse';
 
 /**
- * This script runs on every page. It communicates with the background script
- * to help decide whether to treat the contents of the page as JSON.
+ * This script runs on every page. If the browser rendered the document as raw
+ * JSON (a lone <pre> tag), it replaces the page with the formatted viewer.
  */
-chrome.runtime.sendMessage({}, (response: boolean) => {
-  if (!response) {
+
+// Look for JSON if the content type is "application/json",
+// or "application/whatever+json".
+const jsonContentType = /^application\/([a-z]+\+)?json$/;
+
+function isJSONPage(): boolean {
+  return jsonContentType.test((document as any).contentType) || location.pathname.endsWith('.json');
+}
+
+function formatPage() {
+  const pre = document.getElementsByTagName('pre')[0];
+  if (!pre) {
     return;
   }
 
-  // At least in chrome, the JSON is wrapped in a pre tag.
-  const content = document.getElementsByTagName('pre')[0].innerText;
+  const content = pre.innerText;
   let outputDoc = '';
 
   try {
@@ -24,4 +33,8 @@ chrome.runtime.sendMessage({}, (response: boolean) => {
 
   document.documentElement.innerHTML = outputDoc;
   installCollapseEventListeners();
-});
+}
+
+if (isJSONPage()) {
+  formatPage();
+}

@@ -1,7 +1,7 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "PrettyJSON",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Format JSON code in browser",
     "author": "Vipin Yadav",
     "homepage_url": "https://vipinyadav.com/",
@@ -11,11 +11,6 @@
         "64": "icon64.png",
         "128": "icon128.png",
         "256": "icon256.png"
-    },
-    "background": {
-        "scripts": [
-            "background.js"
-        ]
     },
     "content_scripts": [
         {
@@ -27,14 +22,19 @@
             ]
         }
     ],
-    "permissions": [
-        "<all_urls>",
-        "webRequest",
-        "webRequestBlocking"
+    "host_permissions": [
+        "<all_urls>"
     ],
     "web_accessible_resources": [
-        "viewer.css",
-        "viewer.js"
+        {
+            "resources": [
+                "viewer.css",
+                "viewer.js"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
     ],
     "default_locale": "en"
 }
