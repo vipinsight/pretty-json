@@ -1,5 +1,5 @@
 {
-    "version": "1.0.2",
+    "version": "1.0.3",
     "name": "prettyjson",
     "title": "Pretty JSON",
     "description": "Format JSON code in browser.",
