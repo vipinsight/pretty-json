@@ -1,8 +1,10 @@
 *.xpi
 *.zip
 .tern-port
-yarn.lock
 /ts-out
 /build
 /node_modules
 
+
+/ts-out-cjs
+.DS_Store

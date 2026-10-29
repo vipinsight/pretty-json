@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "PrettyJSON",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Format JSON code in browser",
     "author": "Vipin Yadav",
     "homepage_url": "https://vipinyadav.com/",
@@ -28,8 +28,7 @@
     "web_accessible_resources": [
         {
             "resources": [
-                "viewer.css",
-                "viewer.js"
+                "viewer.css"
             ],
             "matches": [
                 "<all_urls>"

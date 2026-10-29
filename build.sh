@@ -5,8 +5,7 @@ tsc
 rm -rf build
 mkdir -p build
 
-rollup ts-out/content.js --format iife --name 'background' --file build/content.js
-rollup ts-out/viewer.js --format iife --name 'background' --file build/viewer.js
+rollup ts-out/content.js --format iife --file build/content.js
 cp src/viewer.css build/viewer.css
 cp src/manifest.json build/manifest.json
 cp license.txt build/license.txt
