@@ -10,7 +10,7 @@ A lightweight Manifest V3 extension for **Microsoft Edge** and **Google Chrome**
 
 - **Syntax highlighting** for strings, numbers, booleans, `null` and property names.
 - **Collapse and expand** any object or array with a click, or collapse/expand everything with the left and right arrow keys.
-- **Property paths on hover**: hover a key to see its path, e.g. `<root>.items[2].name`.
+- **Property paths on hover**: hover a plain key to see its path, e.g. `<root>.items[2].name`.
 - **Clickable links**: string values that are `http`, `https` or `file` URLs become links.
 - **Large numbers stay exact**: integers above JavaScript's safe range (for example `12345678901234567890`) are shown with all their digits instead of being rounded.
 - **Readable errors**: if the document is not valid JSON you see the parse error message together with the raw text, instead of a blank page.
