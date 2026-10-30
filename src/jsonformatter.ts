@@ -151,13 +151,13 @@ function massageError(error: Error): {
   column?: number;
 } {
   if (!error.message) {
-    return error;
+    return { message: '' };
   }
 
   const message = error.message.replace(/^JSON.parse: /, '').replace(/of the JSON data/, '');
   const parts = /line (\d+) column (\d+)/.exec(message);
   if (!parts || parts.length !== 3) {
-    return error;
+    return { message: htmlEncode(message) };
   }
 
   return {
