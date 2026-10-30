@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./ts-out-cjs/",
+    "module": "commonjs",
+    "moduleResolution": "node10",
+    "sourceMap": false
+  },
+  "include": [
+    "./src/content-type.ts",
+    "./src/jsonformatter.ts",
+    "./src/safe-encode-numbers.ts"
+  ]
+}

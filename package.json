@@ -1,29 +1,23 @@
 {
-    "version": "1.0.3",
+    "version": "1.0.4",
     "name": "prettyjson",
     "title": "Pretty JSON",
     "description": "Format JSON code in browser.",
     "author": "Vipin Yadav",
-    "repository": "https://github.com/vipiny35/pretty-json.git",
+    "repository": "https://github.com/vipinsight/pretty-json.git",
     "license": "MIT",
     "scripts": {
-        "start": "./build.sh",
-        "lint": "tslint -p tsconfig.json",
-        "watch": "npm-watch"
-    },
-    "watch": {
-        "start": {
-            "patterns": "lib/*.ts",
-            "extensions": "js,ts"
-        }
+        "start": "bash build.sh",
+        "build": "bash build.sh",
+        "lint": "tsc --noEmit",
+        "test": "tsc -p tsconfig.test.json && node --test tests/*.test.cjs"
     },
     "devDependencies": {
-        "@types/chrome": "^0.0.65",
-        "npm-watch": "^0.3.0",
-        "rollup": "^0.58.2",
-        "tslint": "^5.10.0",
-        "tslint-eslint-rules": "^5.1.0",
-        "typescript": "^2.8.3",
-        "web-ext-types": "^2.0.1"
+        "@types/chrome": "^0.0.328",
+        "rollup": "^4.40.0",
+        "typescript": "^5.8.0"
+    },
+    "engines": {
+        "node": ">=20"
     }
 }

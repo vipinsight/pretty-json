@@ -3,10 +3,6 @@
         "message": "Format JSON code in browser.",
         "description": "Description of the extension."
     },
-    "detailedDescription": {
-        "message": "Normally when encountering a JSON document (content type \"application/json\"), the browser simply shows plain text. With the PrettyJSON extension, JSON documents are formatted, highlighted, and arrays and objects can be collapsed. Even if the JSON document contains errors, PrettyJSON will still show the raw text.",
-        "description": "Longer description for the extension in the stores."
-    },
     "errorParsing": {
         "message": "There was an error parsing the JSON document. The document may not be well-formed.",
         "description": "The message shown when there was an error parsing your JSON"

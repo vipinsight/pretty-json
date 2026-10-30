@@ -1,21 +1,21 @@
 # Privacy Policy
 
-Your data always belongs to you, and only you. We does not collect any data.
+Your data always belongs to you, and only you. PrettyJSON does not collect any data.
 
 ## How your data is protected and used
 
-- By default, We does not send any data to our servers or any third parties. All your data is processed and stored locally on your device.
-- If you connect We to your Google Drive account, data is only transmitted from your browser to servers belonging to Google.
-- If you enable the "synchronize options" setting, your options will be sent to servers belonging to the vendor of the browser you are using.
-- When processing a page, We needs to inject temporary data into the page to save it accurately. We can download resources that are not displayed or not already cached but present in the page. When using our extendion in Chromium-based browsers, websites can fetch resources declared in the "web_accessible_resources" section of the manifest.json file. Because of this, a website may be able to detect you are using our extension or have saved a page on the website with us.
+- PrettyJSON does not send any data to our servers or to any third parties. It makes no network requests of its own.
+- When you open a JSON document, the extension reads that document inside your browser and replaces the page with a formatted view. The content never leaves your device.
+- PrettyJSON does not store or sync any settings or page content.
+- In Chromium-based browsers, websites can fetch resources declared in the "web_accessible_resources" section of the manifest.json file. Because of this, a website may be able to detect that you are using this extension.
 
 ## Customer support
 
-When you request for customer support, we may ask for your email address to get back to you.
+When you request customer support, we may ask for your email address to get back to you.
 
 ## Changes to our privacy policy
 
-We keep our privacy notice under regular review and we will place any updates on this document. This privacy notice was last updated on March 2020.
+We keep our privacy notice under regular review and will place any updates on this document. This privacy notice was last updated in October 2026.
 
 ## How to contact us
 

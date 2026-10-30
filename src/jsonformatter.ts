@@ -21,7 +21,7 @@ export function errorPage(error: Error, data: string, uri: string) {
 /** Produce an error content for when parsing fails. */
 function errorPageBody(error: Error, data: string) {
   // Escape unicode nulls
-  data = data.replace("\u0000", "\uFFFD");
+  data = data.replace(/\u0000/g, "\uFFFD");
 
   const errorInfo = massageError(error);
 
@@ -196,7 +196,6 @@ function toHTML(content: string, title: string) {
 <html><head><title>${htmlEncode(title)}</title>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="${chrome.runtime.getURL("viewer.css")}">
-<script type="text/javascript" src="${chrome.runtime.getURL("viewer.js")}"></script>
 </head><body>
 ${content}
 </body></html>`;
