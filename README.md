@@ -3,6 +3,10 @@ Pretty JSON
 
 PrettyJSON is a Manifest V3 extension for Microsoft Edge and Google Chrome that formats JSON documents in the browser: syntax highlighting, collapsible objects and arrays, clickable links, and a readable error view for invalid JSON.
 
+## Install
+
+[Get PrettyJSON from the Microsoft Edge Add-ons store](https://microsoftedge.microsoft.com/addons/detail/jilmabbdmkbakhjganilpihpakkielnl).
+
 ## Development
 
 Requires [Node.js](https://nodejs.org/) 20+ and [Yarn](https://yarnpkg.com/).
